@@ -1,0 +1,8 @@
+<button (click)="onCardClick()" class="flex flex-col bg-slate-800 rounded-lg overflow-hidden w-56 cursor-pointer hover:scale-105 transition shadow-lg">
+  <img [src]="image()" [alt]="title()" class="h-32 w-full object-cover" />
+  <div class="p-4 flex flex-col gap-2">
+    <span class="text-white font-bold text-lg">{{ title() }}</span>
+    <span class="text-2xl">{{ getStars() }}</span>
+    <span [class]="getLabelColor() + ' text-sm font-semibold'">{{ getLabel() }}</span>
+  </div>
+</button>
